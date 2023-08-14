@@ -1,21 +1,29 @@
-import express from 'express';
-import fetch from 'node-fetch';
+import express from "express";
+// import path from 'path'
+const app = express();
+const PORT = (process.env.PORT = 3000);
+app.use(express.json());
 
-const app = express()
-const port = 3000
-app.use(express.json())
-//  Create a Send route
+// sends the message the client!
 app.get("/", (req, res) => {
-  res.send("hello from backend to frontend!!");
+  res.send("hello from backend to frontend!");
 });
 
-// Create a POST route
-app.post('/weather', (req, res) => {
-const { cityName } = req.body
-res.send(`The exact words you submitted ${cityName}`)
-})
-app.use(express.json())
+// Adding a POST request
+app.post("/weather", (req, res) => {
+  try {
+    const { cityName } = req.body;
+    if (!cityName) {
+      res.status(400).json({ error: "City name is required." });
+    }
+    res.json(`the exact words you submitted ${cityName}`);
+  } catch (error) {
+    console.error("An error occurred on the server:", error);
+    res.status(500).json({ error: "An error occurred on the server." });
+  }
+});
 
-app.listen(port, () => {
-  console.log(`Server running on port${port}`)
-})
+// Server Listen
+app.listen(PORT, () => {
+  console.log(`Server running on http://localhost:${PORT}`);
+});

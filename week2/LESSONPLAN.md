@@ -1,10 +1,31 @@
 # Node.js Week 2 (Lesson Plan)
 
 ## Agenda
+https://hackyourfuture.github.io/study/#/the-internet/designing-apis?id=analogy
 
-1. REST
-2. CRUD and HTTP methods
-3. RESTful API
+https://nordicapis.com/5-examples-of-apis-we-use-in-our-everyday-lives/
+## 1. REST :
+REST stands for Representational State Transfer. This means that when a client request information about a resource, the server will transfer to the client a representation of the state of the requested resource.
+
+REST is only a concept, an idea of how applications should be organized.
+
+The world of REST consists of two things: resources and operations (Creating, Reading, Updating, Deleting).
+
+- REST also enables clients to take actions on those resources. We call these actions CRUD operations:
+
+Creating new resources, such as videos/ images/text files, etc.
+Retrieving those files and reading them.
+Updating the content of those files.
+Deleting those files.
+## 2. CRUD and HTTP methods
+CRUD is short for Create, Read, Update and Delete: the four actions that any backend application should be able to handle, no matter what language the code is written in. The CRUD structure responds to the user's need to create new data, to be able to read (display in the user interface) it, to update old data and finally to delete it.
+
+The concept of CRUD is an important condition that each web application needs to fulfill. Why? This is generally how users use applications.
+## 3. RESTful API (Application Programming Interface (API)):
+::: RESTful API's
+Building software is like building houses: architecture is everything. The design of each part is just as important as the utility of it. REST is a specific architectural style for web applications. It serves to organize code in predictable ways.
+
+
 
 ## Core concepts
 
